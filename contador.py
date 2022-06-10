@@ -1,6 +1,3 @@
-from cgitb import reset
-
-
 class Contador():
     
     def __init__(self, vInicial=0, incremento=1, limite=None):

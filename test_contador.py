@@ -1,4 +1,3 @@
-from ast import increment_lineno
 import unittest
 from contador import Contador
 
