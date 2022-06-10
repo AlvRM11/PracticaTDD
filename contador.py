@@ -1,3 +1,6 @@
+from cgitb import reset
+
+
 class Contador():
     
     def __init__(self, vInicial=0, incremento=1, limite=None):
@@ -15,11 +18,13 @@ class Contador():
     def get_limite(self):
         return self.__limite
 
+    def reset(self):
+        return self.get_vInicial()
+
     def incrementador(self):
-        vInicial = self.get_vInicial()
+        contador = self.get_vInicial()
         incremento = self.get_incremento()
         limite = self.get_limite()
-        contador = vInicial
 
         bucle = True
 
@@ -28,7 +33,8 @@ class Contador():
                 print(f'valor actual: {contador}')
                 contador += incremento
             else:
-                print('Se superó el límite')
+                print('Se superó el límite\n')
+                contador = self.reset()
                 bucle = False
                 return contador
 

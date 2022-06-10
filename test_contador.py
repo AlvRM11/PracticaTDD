@@ -20,7 +20,7 @@ class Test_Contador(unittest.TestCase):
     def test3(self):
         contador3 = Contador(0, 4, 16)
 
-        self.assertEqual(contador3.incrementador(), 16)
+        self.assertEqual(contador3.incrementador(), 0)
 
     def test4(self):
         contador4 = Contador(0, 4, 16)
