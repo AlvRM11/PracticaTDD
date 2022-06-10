@@ -30,14 +30,21 @@ class Contador():
 
         while bucle:
             if (contador < limite):
-                print(f'valor actual: {contador}')
+                print(f'valor actual: {contador}\n')
                 contador += incremento
+
+                while bucle:
+                        respuesta = input('¿Desea resetear el contador? y/n\n')
+
+                        if (respuesta == 'y'):
+                            contador = self.reset()
+                            break
+                        elif (respuesta == 'n'):
+                            break
+                        else:
+                            print('Introduzca "y" o "n" para determinar "yes" o " no"\n')
             else:
                 print('Se superó el límite\n')
                 contador = self.reset()
                 bucle = False
                 return contador
-
-if __name__ == '__main__':
-    contador = Contador(0, 4, 16)
-    contador.incrementador()
