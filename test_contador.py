@@ -22,5 +22,10 @@ class Test_Contador(unittest.TestCase):
 
         self.assertEqual(contador3.incrementador(), 16)
 
+    def test4(self):
+        contador4 = Contador(0, 4, 16)
+
+        self.assertEqual(contador4.reset(), contador4.get_vInicial())
+
 if __name__ == '__main__':
     unittest.main()

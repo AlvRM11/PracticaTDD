@@ -31,3 +31,7 @@ class Contador():
                 print('Se superó el límite')
                 bucle = False
                 return contador
+
+if __name__ == '__main__':
+    contador = Contador(0, 4, 16)
+    contador.incrementador()
